@@ -4,5 +4,4 @@
 
 #### Initial Design 
 > Made with figma
-
-![Image] (https://i.imgur.com/If94AX4.png)
+>![image](https://i.imgur.com/If94AX4.png)
