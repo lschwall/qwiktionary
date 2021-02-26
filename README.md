@@ -12,4 +12,7 @@
 >![image](https://i.imgur.com/If94AX4.png)
 
 ##### Stage of Completion
-> Stage 3: Styling
+- [x] Format of application
+- [x] Functionality
+- [ ] styling
+- [ ] publish
