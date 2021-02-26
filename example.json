@@ -1,0 +1,353 @@
+Array [
+    Object {
+        "date": "14th century{ds||2|c|}",
+        "def": Array [
+        Object {
+                "sseq": Array [
+            Array [
+              Array [
+                            "pseq",
+                Array [
+                  Array [
+                                    "bs",
+                    Object {
+                                        "sense": Object {
+                                            "dt": Array [
+                          Array [
+                                                    "text",
+                                                    "{bc}a means of {a_link|testing}: such as",
+                                                ],
+                                            ],
+                                            "sn": "1 a",
+                                        },
+                                    },
+                                ],
+                  Array [
+                                    "sense",
+                    Object {
+                                        "dt": Array [
+                        Array [
+                                                "text",
+                                                "{bc}something (such as a series of questions or exercises) for measuring the skill, knowledge, intelligence, capacities, or aptitudes of an individual or group",
+                                            ],
+                                        ],
+                                        "sn": "(1)",
+                                    },
+                                ],
+                  Array [
+                                    "sense",
+                    Object {
+                                        "dt": Array [
+                        Array [
+                                                "text",
+                                                "{bc}a procedure, reaction, or reagent used to identify or characterize a substance or constituent",
+                                            ],
+                                        ],
+                                        "sn": "(2)",
+                                    },
+                                ],
+                            ],
+                        ],
+              Array [
+                            "sense",
+                Object {
+                                "dt": Array [
+                    Array [
+                                        "text",
+                                        "{bc}a positive result in such a test",
+                                    ],
+                                ],
+                                "sn": "b",
+                            },
+                        ],
+                    ],
+            Array [
+              Array [
+                            "pseq",
+                Array [
+                  Array [
+                                    "sense",
+                    Object {
+                                        "dt": Array [
+                        Array [
+                                                "text",
+                                                "{bc}a critical examination, observation, or evaluation {bc}{sx|trial||}",
+                                            ],
+                                        ],
+                                        "sdsense": Object {
+                                            "dt": Array [
+                          Array [
+                                                    "text",
+                                                    "{bc}the procedure of submitting a statement to such conditions or operations as will lead to its proof or disproof or to its acceptance or rejection ",
+                                                ],
+                          Array [
+                                                    "vis",
+                            Array [
+                              Object {
+                                                            "t": "a {wi}test{/wi} of a statistical hypothesis",
+                                                        },
+                                                    ],
+                                                ],
+                                            ],
+                                            "sd": "specifically",
+                                        },
+                                        "sn": "2 a (1)",
+                                    },
+                                ],
+                  Array [
+                                    "sense",
+                    Object {
+                                        "dt": Array [
+                        Array [
+                                                "text",
+                                                "{bc}a basis for evaluation {bc}{sx|criterion||}",
+                                            ],
+                                        ],
+                                        "sn": "(2)",
+                                    },
+                                ],
+                            ],
+                        ],
+              Array [
+                            "sense",
+                Object {
+                                "dt": Array [
+                    Array [
+                                        "text",
+                                        "{bc}an ordeal or oath required as proof of conformity with a set of beliefs",
+                                    ],
+                                ],
+                                "sn": "b",
+                            },
+                        ],
+              Array [
+                            "sense",
+                Object {
+                                "dt": Array [
+                    Array [
+                                        "text",
+                                        "{bc}{sx|cupel||}",
+                                    ],
+                                ],
+                                "sls": Array [
+                                    "chiefly British",
+                                ],
+                                "sn": "c",
+                            },
+                        ],
+                    ],
+            Array [
+              Array [
+                            "sense",
+                Object {
+                                "dt": Array [
+                    Array [
+                                        "text",
+                                        "{bc}a result or value determined by testing",
+                                    ],
+                                ],
+                                "sn": "3",
+                            },
+                        ],
+                    ],
+            Array [
+              Array [
+                            "sense",
+                Object {
+                                "dt": Array [
+                    Array [
+                                        "text",
+                                        "{bc}{sx|test match||}",
+                                    ],
+                                ],
+                                "sn": "4",
+                            },
+                        ],
+                    ],
+                ],
+            },
+        ],
+        "et": Array [
+        Array [
+                "text",
+                "Middle English, vessel in which metals were assayed, potsherd, from Anglo-French {it}test, tees{/it} pot, Latin {it}testum{/it} earthen vessel; akin to Latin {it}testa{/it} earthen pot, shell",
+            ],
+        ],
+        "fl": "noun",
+        "hom": 1,
+        "hwi": Object {
+            "hw": "test",
+            "prs": Array [
+          Object {
+                    "mw": "ˈtest",
+                    "sound": Object {
+                        "audio": "test0001",
+                        "ref": "c",
+                        "stat": "1",
+                    },
+                },
+            ],
+        },
+        "meta": Object {
+            "id": "test:1",
+            "offensive": false,
+            "section": "alpha",
+            "sort": "200122700",
+            "src": "collegiate",
+            "stems": Array [
+                "test",
+                "tests",
+            ],
+            "uuid": "0e5228e3-40df-4dce-92e0-36748eb1c24c",
+        },
+        "shortdef": Array [
+            "a means of testing: such as",
+            "something (such as a series of questions or exercises) for measuring the skill, knowledge, intelligence, capacities, or aptitudes of an individual or group",
+            "a procedure, reaction, or reagent used to identify or characterize a substance or constituent",
+        ],
+    },
+    Object {
+        "date": "1748{ds|t|1||}",
+        "def": Array [
+        Object {
+                "sseq": Array [
+            Array [
+              Array [
+                            "sense",
+                Object {
+                                "dt": Array [
+                    Array [
+                                        "text",
+                                        "{bc}to put to test or proof {bc}{sx|try||} ",
+                                    ],
+                    Array [
+                                        "uns",
+                      Array [
+                        Array [
+                          Array [
+                                                    "text",
+                                                    "often used with {it}out{/it}",
+                                                ],
+                                            ],
+                                        ],
+                                    ],
+                                ],
+                                "sn": "1",
+                            },
+                        ],
+                    ],
+            Array [
+              Array [
+                            "sense",
+                Object {
+                                "dt": Array [
+                    Array [
+                                        "text",
+                                        "{bc}to require a doctrinal oath of",
+                                    ],
+                                ],
+                                "sn": "2",
+                            },
+                        ],
+                    ],
+                ],
+                "vd": "transitive verb",
+            },
+        Object {
+                "sseq": Array [
+            Array [
+              Array [
+                            "sense",
+                Object {
+                                "dt": Array [
+                    Array [
+                                        "text",
+                                        "{bc}to undergo a test",
+                                    ],
+                                ],
+                                "sn": "1 a",
+                            },
+                        ],
+              Array [
+                            "sense",
+                Object {
+                                "dt": Array [
+                    Array [
+                                        "text",
+                                        "{bc}to be assigned a standing or evaluation on the basis of {a_link|tests} ",
+                                    ],
+                    Array [
+                                        "vis",
+                      Array [
+                        Object {
+                                                "t": "{wi}tested{/wi} positive for cocaine",
+                                            },
+                        Object {
+                                                "t": "the cake {wi}tested{/wi} done",
+                                            },
+                                        ],
+                                    ],
+                                ],
+                                "sn": "b",
+                            },
+                        ],
+                    ],
+            Array [
+              Array [
+                            "sense",
+                Object {
+                                "dt": Array [
+                    Array [
+                                        "text",
+                                        "{bc}to apply a test as a means of analysis or diagnosis ",
+                                    ],
+                    Array [
+                                        "uns",
+                      Array [
+                        Array [
+                          Array [
+                                                    "text",
+                                                    "used with {it}for{/it} ",
+                                                ],
+                          Array [
+                                                    "vis",
+                            Array [
+                              Object {
+                                                            "t": "{wi}test{/wi} for mechanical aptitude",
+                                                        },
+                                                    ],
+                                                ],
+                                            ],
+                                        ],
+                                    ],
+                                ],
+                                "sn": "2",
+                            },
+                        ],
+                    ],
+                ],
+                "vd": "intransitive verb",
+            },
+        ],
+        "dros": Array [
+        Object {
+                "def": Array [
+            Object {
+                        "sseq": Array [
+                Array [
+                  Array [
+                                    "sense",
+                    Object {
+                                        "dt": Array [
+                        Array [
+                                                "text",
+                                                "{bc}to make a preliminary test or survey (as of reaction or interest) before embarking on a course of action",
+                                            ],
+                                        ],
+                                    },
+                                ],
+                            ],
+                        ],
+                    },
+                ],
+     ...(truncated to the first 10000 characters)
