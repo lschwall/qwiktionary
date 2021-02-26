@@ -8,7 +8,7 @@
 > then scan the qr on your iphone to open with the EXPO APP
 
 #### Initial Design 
-> Made with figma
+> Made using figma application via Windows.
 >![image](https://i.imgur.com/If94AX4.png)
 
 ##### Stage of Completion
