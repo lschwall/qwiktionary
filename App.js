@@ -20,7 +20,7 @@ const App = () => {
   const [information, setWordInformation] = useState([])
 
   const handleSearch = () => {
-    axios.get(`https://dictionaryapi.com/api/v3/references/collegiate/json/${searchTerm}?key=INSERTAPIKEYHERE`)
+    axios.get(`https://dictionaryapi.com/api/v3/references/collegiate/json/${searchTerm}?key=`)
       .then(({ data }) => {
         if (data) {
           setWordInformation(data);
