@@ -9,24 +9,27 @@ import {
   TextInput,
   Keyboard,
   ScrollView,
-  Image
+  Image,
+  Vibration
 } from "react-native";
+import { decode } from 'html-entities'
 import styles from './Styles/styles.js';
 
 
 const App = () => {
-
-  const [searchTerm, setSearchTerm] = useState('')
+  const [searchTerm, setSearchTerm] = useState()
   const [information, setWordInformation] = useState([])
 
   const handleSearch = () => {
-    axios.get(`https://dictionaryapi.com/api/v3/references/collegiate/json/${searchTerm}?key=`)
-      .then(({ data }) => {
-        if (data) {
-          setWordInformation(data);
-        }
-      })
-      .catch(err => console.warn(err))
+    if (searchTerm) {
+      axios.get(`https://dictionaryapi.com/api/v3/references/collegiate/json/${searchTerm}?key=eb6a48c1-0e5c-439c-bb02-e2a598dae034`)
+        .then(({ data }) => {
+          if (data) {
+            setWordInformation(data);
+          }
+        })
+        .catch(err => console.warn(err))
+    }
   }
 
   const loadInformation = () => {
@@ -39,31 +42,62 @@ const App = () => {
           {information.map((word, id) => {
             if (word.def) {
               return (
-                <View key={id} style={styles.definitionContainer}>
-                  <View style={styles.termContainer}>
-                    <Text style={styles.id}>
-                      {id}
-                    </Text>
-                    <Text style={styles.term}>
-                      {searchTerm}
-                    </Text>
-                    <Text style={styles.type}>
-                      {word.fl}
-                    </Text>
-                  </View>
-                  <View style={styles.definition}>
-                    <Text >
-                      {word.shortdef}
-                      {"\n"}
-                    </Text>
-                  </View>
+                <View key={id} style={styles.listOfDefinitionsContainer}>
+                  {
+                    id === 0 ?
+                      (
+                        <View>
+                          <View style={styles.primaryDefinitionContainer}>
+                            <View style={styles.primaryDefinition}>
+                              <Text style={styles.primaryId}>
+                                {`${id}.`}
+                              </Text>
+                              <Text style={styles.primarySearchTerm}>
+                                {searchTerm}
+                              </Text>
+                              <Text style={styles.primaryType}>
+                                {word.fl}
+                              </Text>
+                            </View>
+                          </View>
+                          <View styles={styles.primaryDescriptionView}>
+                            <Text style={styles.primaryDescription}>
+                              {word.shortdef}
+                            </Text>
+                          </View>
+                        </View>
+                      )
+                      :
+                      (
+                        <View>
+                          <View style={styles.definitionContainer}>
+                            <View style={styles.definition}>
+                              <Text style={styles.id}>
+                                {`${id}.`}
+                              </Text>
+                              <Text style={styles.searchTerm}>
+                                {searchTerm}
+                              </Text>
+                              <Text style={styles.type}>
+                                {word.fl}
+                              </Text>
+                            </View>
+                          </View>
+                          <View styles={styles.descriptionView}>
+                            <Text style={styles.description}>
+                              {word.shortdef}
+                            </Text>
+                          </View>
+                        </View>
+                      )
+                  }
                 </View>
               )
             } else {
               return (
                 <View key={id} style={styles.definitionContainer}>
                   <Text style={styles.noDefinition}>
-                    No definition available
+                    Definition Missing
                   </Text>
                 </View>
               )
@@ -75,15 +109,14 @@ const App = () => {
 
   return (
     <SafeAreaView style={styles.container}>
-      <Text>
+      <Text style={styles.logo}>
         Qwiktionary
       </Text>
       <TextInput
         style={styles.input}
-        enablesReturnKeyAutomatically
         keyboardAppearance='default'
         placeholder={`Enter Search Term...`}
-        returnKeyType="search"
+        returnKeyType="done"
         textAlign="center"
         onChangeText={text => {
           setWordInformation([])
@@ -91,15 +124,16 @@ const App = () => {
         }}
         clearButtonMode="while-editing"
         onSubmitEditing={() => {
-          handleSearch()
+          handleSearch();
           Keyboard.dismiss();
         }}
       />
       <View
-        style={styles.line}
+        style={styles.dividerTop}
       />
       {loadInformation()}
     </SafeAreaView>
+
   );
 }
 export default App;
