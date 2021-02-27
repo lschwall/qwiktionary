@@ -1,24 +1,24 @@
 import * as React from "react";
-import { useState } from 'react';
+import * as Font from 'expo-font'
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 import {
-  StyleSheet,
   View,
   Text,
   SafeAreaView,
-  TextInput,
-  Keyboard,
   ScrollView,
-  Image,
-  Vibration
 } from "react-native";
-import { decode } from 'html-entities'
 import styles from './Styles/styles.js';
+import SearchBox from "./Components/SearchBox.js";
+import Definitions from "./Components/Definitions.js";
+import Primary from './Components/Primary.js'
 
 
 const App = () => {
-  const [searchTerm, setSearchTerm] = useState()
-  const [information, setWordInformation] = useState([])
+  const [loaded, setLoaded] = useState(false);
+  const [searchTerm, setSearchTerm] = useState();
+  const [information, setWordInformation] = useState([]);
+
 
   const handleSearch = () => {
     if (searchTerm) {
@@ -46,49 +46,11 @@ const App = () => {
                   {
                     id === 0 ?
                       (
-                        <View>
-                          <View style={styles.primaryDefinitionContainer}>
-                            <View style={styles.primaryDefinition}>
-                              <Text style={styles.primaryId}>
-                                {`${id}.`}
-                              </Text>
-                              <Text style={styles.primarySearchTerm}>
-                                {searchTerm}
-                              </Text>
-                              <Text style={styles.primaryType}>
-                                {word.fl}
-                              </Text>
-                            </View>
-                          </View>
-                          <View styles={styles.primaryDescriptionView}>
-                            <Text style={styles.primaryDescription}>
-                              {word.shortdef}
-                            </Text>
-                          </View>
-                        </View>
+                        <Primary id={id} fl={word.fl} shortdef={word.shortdef} searchTerm={searchTerm} />
                       )
                       :
                       (
-                        <View>
-                          <View style={styles.definitionContainer}>
-                            <View style={styles.definition}>
-                              <Text style={styles.id}>
-                                {`${id}.`}
-                              </Text>
-                              <Text style={styles.searchTerm}>
-                                {searchTerm}
-                              </Text>
-                              <Text style={styles.type}>
-                                {word.fl}
-                              </Text>
-                            </View>
-                          </View>
-                          <View styles={styles.descriptionView}>
-                            <Text style={styles.description}>
-                              {word.shortdef}
-                            </Text>
-                          </View>
-                        </View>
+                        <Definitions id={id} fl={word.fl} shortdef={word.shortdef} searchTerm={searchTerm} />
                       )
                   }
                 </View>
@@ -107,30 +69,26 @@ const App = () => {
     }
   }
 
+  useEffect(() => {
+    Font.loadAsync({
+      'Poppins-Regular': require('./assets/fonts/Poppins-Regular.otf')
+    }
+    ).then(() => setLoaded(true))
+  }, [])
+
+
+  if (!loaded) {
+    return (
+      <View>
+        <Text>
+          App loading
+        </Text>
+      </View>
+    )
+  }
   return (
     <SafeAreaView style={styles.container}>
-      <Text style={styles.logo}>
-        Qwiktionary
-      </Text>
-      <TextInput
-        style={styles.input}
-        keyboardAppearance='default'
-        placeholder={`Enter Search Term...`}
-        returnKeyType="done"
-        textAlign="center"
-        onChangeText={text => {
-          setWordInformation([])
-          setSearchTerm(text)
-        }}
-        clearButtonMode="while-editing"
-        onSubmitEditing={() => {
-          handleSearch();
-          Keyboard.dismiss();
-        }}
-      />
-      <View
-        style={styles.dividerTop}
-      />
+      <SearchBox setSearchTerm={setSearchTerm} setWordInformation={setWordInformation} handleSearch={handleSearch} />
       {loadInformation()}
     </SafeAreaView>
 

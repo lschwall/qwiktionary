@@ -1,3 +1,5 @@
+import * as Font from 'expo-font';
+
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -8,7 +10,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     logo: {
-        fontFamily: 'KohinoorBangla-Semibold',
+        fontFamily: 'Poppins-Regular',
         fontSize: 36,
         marginBottom: '5%'
     },
@@ -47,16 +49,30 @@ const styles = StyleSheet.create({
     primaryId: {
         flex: 1,
         fontSize: 18,
+        fontWeight: "100",
         lineHeight: 30
     },
     primarySearchTerm: {
-        flex: 2,
+        flex: 3,
         fontSize: 30,
-        lineHeight: 30
+        lineHeight: 30,
+        fontFamily: 'Raleway-Regular'
     },
     primaryType: {
-        flex: 3,
-        lineHeight: 30
+        flex: 4,
+        lineHeight: 30,
+        fontFamily: 'Raleway-Thin'
+    },
+    primaryDescriptionView: {
+
+    },
+    primaryDescription: {
+        flex: 1,
+        marginLeft: '10%',
+        marginTop: '5%',
+        letterSpacing: 1,
+        flexWrap: 'wrap',
+        fontStyle: 'italic'
     },
     descriptionView: {
 
@@ -72,7 +88,7 @@ const styles = StyleSheet.create({
     },
     id: {
         flex: 1,
-
+        fontWeight: '100'
     },
     searchTerm: {
         flex: 2,
@@ -81,11 +97,13 @@ const styles = StyleSheet.create({
     type: {
         flex: 3,
     },
-    primaryDescriptionView: {
-
-    },
-    primaryDescription: {
-
+    description: {
+        flex: 1,
+        marginLeft: '10%',
+        marginTop: '5%',
+        letterSpacing: 1,
+        flexWrap: 'wrap',
+        fontStyle: 'italic',
     },
     noDefinition: {
         marginTop: '10%',
