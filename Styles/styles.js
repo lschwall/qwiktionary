@@ -39,6 +39,9 @@ const styles = StyleSheet.create({
         width: '80%'
     },
     listOfDefinitionsContainer: {
+        marginLeft: '5%',
+        marginRight: '5%',
+        width: '80%'
     },
     primaryDefinitionContainer: {
     },
@@ -48,20 +51,23 @@ const styles = StyleSheet.create({
     },
     primaryId: {
         flex: 1,
-        fontSize: 18,
+        fontSize: 14,
         fontWeight: "100",
-        lineHeight: 30
+        lineHeight: 25,
+        marginRight: '-5%'
     },
     primarySearchTerm: {
         flex: 3,
-        fontSize: 30,
-        lineHeight: 30,
+        fontSize: 25,
+        lineHeight: 25,
         fontFamily: 'Raleway-Regular'
     },
     primaryType: {
         flex: 4,
-        lineHeight: 30,
-        fontFamily: 'Raleway-Thin'
+        lineHeight: 25,
+        fontFamily: 'Raleway-Thin',
+        marginEnd: '10%',
+        marginLeft: '-10%'
     },
     primaryDescriptionView: {
 
@@ -71,8 +77,10 @@ const styles = StyleSheet.create({
         marginLeft: '10%',
         marginTop: '5%',
         letterSpacing: 1,
-        flexWrap: 'wrap',
-        fontStyle: 'italic'
+        fontStyle: 'italic',
+        fontSize: 24,
+        textAlign: 'left',
+        width: 300
     },
     descriptionView: {
 
@@ -92,10 +100,11 @@ const styles = StyleSheet.create({
     },
     searchTerm: {
         flex: 2,
-
+        fontFamily: 'Raleway-Regular'
     },
     type: {
         flex: 3,
+        fontFamily: 'Raleway-Thin'
     },
     description: {
         flex: 1,

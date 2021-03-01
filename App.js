@@ -12,6 +12,8 @@ import styles from './Styles/styles.js';
 import SearchBox from "./Components/SearchBox.js";
 import Definitions from "./Components/Definitions.js";
 import Primary from './Components/Primary.js'
+import { isLoading } from "expo-font";
+import { Image } from "react-native";
 
 
 const App = () => {
@@ -19,6 +21,11 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState();
   const [information, setWordInformation] = useState([]);
 
+  const loadingImage = () => {
+    return (
+      <Image source={require('./assets/VD8mNbQ.gif')} />
+    )
+  }
 
   const handleSearch = () => {
     if (searchTerm) {
@@ -70,10 +77,13 @@ const App = () => {
   }
 
   useEffect(() => {
+    loadingImage();
     Font.loadAsync({
-      'Poppins-Regular': require('./assets/fonts/Poppins-Regular.otf')
+      'Poppins-Regular': require('./assets/fonts/Poppins-Regular.otf'),
+      'Raleway-Thin': require('./assets/fonts/Raleway-Thin.otf'),
+      'Raleway-Regular': require('./assets/fonts/Raleway-Regular.otf'),
     }
-    ).then(() => setLoaded(true))
+    ).then(() => setLoaded(true));
   }, [])
 
 
