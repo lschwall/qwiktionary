@@ -1,3 +1,5 @@
+import * as Font from 'expo-font';
+
 import { StyleSheet } from 'react-native';
 
 const styles = StyleSheet.create({
@@ -8,7 +10,7 @@ const styles = StyleSheet.create({
         justifyContent: 'center',
     },
     logo: {
-        fontFamily: 'KohinoorBangla-Semibold',
+        fontFamily: 'Poppins-Regular',
         fontSize: 36,
         marginBottom: '5%'
     },
@@ -37,6 +39,9 @@ const styles = StyleSheet.create({
         width: '80%'
     },
     listOfDefinitionsContainer: {
+        marginLeft: '5%',
+        marginRight: '5%',
+        width: '80%'
     },
     primaryDefinitionContainer: {
     },
@@ -46,17 +51,36 @@ const styles = StyleSheet.create({
     },
     primaryId: {
         flex: 1,
-        fontSize: 18,
-        lineHeight: 30
+        fontSize: 14,
+        fontWeight: "100",
+        lineHeight: 25,
+        marginRight: '-5%'
     },
     primarySearchTerm: {
-        flex: 2,
-        fontSize: 30,
-        lineHeight: 30
+        flex: 3,
+        fontSize: 25,
+        lineHeight: 25,
+        fontFamily: 'Raleway-Regular'
     },
     primaryType: {
-        flex: 3,
-        lineHeight: 30
+        flex: 4,
+        lineHeight: 25,
+        fontFamily: 'Raleway-Thin',
+        marginEnd: '10%',
+        marginLeft: '-10%'
+    },
+    primaryDescriptionView: {
+
+    },
+    primaryDescription: {
+        flex: 1,
+        marginLeft: '10%',
+        marginTop: '5%',
+        letterSpacing: 1,
+        fontStyle: 'italic',
+        fontSize: 24,
+        textAlign: 'left',
+        width: 300
     },
     descriptionView: {
 
@@ -72,20 +96,23 @@ const styles = StyleSheet.create({
     },
     id: {
         flex: 1,
-
+        fontWeight: '100'
     },
     searchTerm: {
         flex: 2,
-
+        fontFamily: 'Raleway-Regular'
     },
     type: {
         flex: 3,
+        fontFamily: 'Raleway-Thin'
     },
-    primaryDescriptionView: {
-
-    },
-    primaryDescription: {
-
+    description: {
+        flex: 1,
+        marginLeft: '10%',
+        marginTop: '5%',
+        letterSpacing: 1,
+        flexWrap: 'wrap',
+        fontStyle: 'italic',
     },
     noDefinition: {
         marginTop: '10%',
